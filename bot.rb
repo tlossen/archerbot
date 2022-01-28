@@ -7,6 +7,7 @@ PUBLIC_IP = SNMP::ObjectId.new("1.3.6.1.2.1.4.20.1")
 
 CONFIG = YAML.load_file("noip.yaml")
 
+# source: https://gist.github.com/AaronC81/ac07a59afa8a90a97590fe8972dd92aa
 def public_ip
   SNMP::Manager.new(host: GATEWAY_IP)
     .get_next(PUBLIC_IP)
