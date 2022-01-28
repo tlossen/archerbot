@@ -33,6 +33,6 @@ while true
     last_ip = current_ip
     last_time = current_time
   end
-  sleep(60)
+  sleep(30)
 end
 
